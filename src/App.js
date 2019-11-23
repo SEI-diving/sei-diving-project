@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Component404 from "./profile/components/Component404";
 import ShowProfile from "./profile/ShowProfile";
+import DivingLocations from "./Locations/DivingLocations";
+
+
 import axios from "axios";
+import EditProfile from "./profile/EditProfile";
 
 
 export default class App extends Component {
@@ -57,9 +61,23 @@ export default class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route
-            path="/Profile"
+            exact path="/Profile"
             render={props => (
               <ShowProfile {...props} response={data} />
+            )}
+          />
+
+<Route
+             exact path="/Profile/Edit/:id"
+            render={props => (
+              <EditProfile {...props} response={data} />
+            )}
+          />
+          <Route
+            path="/Locations"
+             component={DivingLocations} 
+
+            />
             )}
           />
           {/* <Route path="/contact" render={(props) => <Contact {...props} name="Yazeed" />} /> */}

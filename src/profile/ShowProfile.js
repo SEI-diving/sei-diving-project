@@ -33,6 +33,7 @@ export default class ShowProfile extends Component {
 
 
         <Card>
+        
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12">
       
@@ -51,6 +52,7 @@ export default class ShowProfile extends Component {
                           
                       </div>
                       <div className="desc">{bio}</div>
+                      
                       
                       <div className="bottom">
                           <a href={"mailto:"+email}>

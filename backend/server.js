@@ -4,10 +4,12 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv/config");
 const Profile = require('./model/Profiles')
 var cors = require('cors')
-
+const methodOverride = require('method-override');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(methodOverride('_method'));
 
 app.use(cors())
 mongoose.connect(
@@ -56,6 +58,27 @@ mongoose.set('useCreateIndex', true)
         }
           
           
+      })
+
+      //update
+      app.put('/Profile/Edit/:id', async(req,res)=>{
+        //Profile.findById(req.params.id)
+        try {
+            var result = await Profile.findById(req.params.id);
+            res.send({result});
+
+            Profile.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
+              
+          });
+
+
+
+
+        } catch (error) {
+            res.send({error})
+        }
+
+        
       })
 
   
