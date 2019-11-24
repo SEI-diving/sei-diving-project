@@ -9,7 +9,7 @@ console.log("EditProfileHandler Run");
 
 
 }
-    
+    //efnd
     render() {
 console.log(this.props.response.result);
       const { email, bio, name, createdAt } = this.props.response.result;
