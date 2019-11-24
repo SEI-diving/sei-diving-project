@@ -1,86 +1,34 @@
-const express = require("express");
-const app = express();
+const express = require('express')
+const app = express()
 const mongoose = require("mongoose");
-const dotenv = require("dotenv/config");
-const Profile = require('./model/Profiles')
-var cors = require('cors')
-const methodOverride = require('method-override');
+const cors = require('cors')
+const methodOverride =require('method-override') 
+require('dotenv/config')
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+const PORT = 5000 || process.env.PORT
 
-app.use(methodOverride('_method'));
-
+//midllwere
+app.use(express.json())
 app.use(cors())
+app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'))
+app.set('view engine', 'ejs')
+app.use('/corses' , require('./routes/corses'))
+//mongo connect 
 mongoose.connect(
-    process.env.DEV_DB,
-    { useNewUrlParser: true, useUnifiedTopology: true },
-    () => {
-      console.log("connected to mongoDB");
-    }
-  );
-mongoose.set('useCreateIndex', true)
+  process.env.DB_CONNECTION,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    console.log(`connect tho mongoDB`);
+  }
+);
 
 
-  app.get('/Profile/:id', async(req,res)=>{
-      //Profile.findById(req.params.id)
-      try {
-          var result = await Profile.findById(req.params.id);
-          res.send({result});
-      } catch (error) {
-          res.send({error})
-      }
-    })
+// app.get('/', async (req, res) => {
+// res.redirect("/corses"); // يوديك على الهذا تلقائي
+// })
 
-    app.get('/Profile', async(req,res)=>{
-        //Profile.findById(req.params.id)
-        try {
-            var result = await Profile.find();
-            res.send({result});
-        } catch (error) {
-            res.send({error})
-        }
-      })
-
-    app.post('/Profile', async(req,res)=>{
-        //Profile.findById(req.params.id)
-        let profile = new Profile({
-            name: req.body.name,
-            email: req.body.email,
-            bio: req.body.bio,
-          });
-          
-        try {
-            var data = await profile.save()
-            res.send({data})
-        } catch (error) {
-            res.send({error})
-        }
-          
-          
-      })
-
-      //update
-      app.put('/Profile/Edit/:id', async(req,res)=>{
-        //Profile.findById(req.params.id)
-        try {
-            var result = await Profile.findById(req.params.id);
-            res.send({result});
-
-            Profile.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
-              
-          });
-
-
-
-
-        } catch (error) {
-            res.send({error})
-        }
-
-        
-      })
-
-  
-
-  app.listen(3500, () => console.log("server running"));
+app.listen(PORT, () => {
+    console.log(`running on ${PORT}`);
+    
+});
