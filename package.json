@@ -1,5 +1,5 @@
 {
-  "name": "diving",
+  "name": "sei-diving",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,7 +7,7 @@
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "ejs": "^2.7.4",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.7.12",
@@ -15,7 +15,8 @@
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "start-script": "^0.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,5 +43,13 @@
   "main": "index.js",
   "devDependencies": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEI-diving/sei-diving-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SEI-diving/sei-diving-project/issues"
+  },
+  "homepage": "https://github.com/SEI-diving/sei-diving-project#readme"
 }
