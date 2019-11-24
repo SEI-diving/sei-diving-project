@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card } from "react-bootstrap";
 import './profile.css';
+import 'semantic-ui-css/semantic.min.css'
 
 export default class EditProfile extends Component {
 EditProfileHandler = ()=>{
@@ -49,11 +50,13 @@ console.log(this.props.response.result);
                           
                           <div className="desc">Profile Created: {date[0]}-{date[1]}</div>
                       </div>
-<input type="submit" value="submit" />
-                      
-          
-                  </div>
-          
+{/* <input type="submit" value="submit" /> */}
+<div className="ui buttons">
+  <button  className="ui button">Cancel</button>
+  <div className="or"></div>
+  <button type="submit" className="ui positive button">Save</button>
+</div>
+</div>  
             </div>
             </form>
           </Card>
