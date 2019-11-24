@@ -64,18 +64,20 @@ componentDidMount(){
     <Nav className="mr-auto">
       
     </Nav>
-    <Form inline>
-    <a href ="/profile"><img
-            src="https://www.pngrepo.com/download/48656/scuba-diver.png"
-            width="30"
-            height="30"
+    <Form className ="d-flex justify-content-around" inline>
+    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button style = {{marginRight:"10px"}} variant="outline-secondary">Search</Button>
+    <a style = {{marginRight:"10px"}}  href ="/profile"><img
+            src="https://i.ibb.co/t3S57zK/scuba-diving-recreation-13-512.png"
+            width="40"
+            height="40"
             className="d-inline-block align-top"
             alt="React Bootstrap logo"
           /></a>
       <a href ="/cart"><img
-            src="https://image.flaticon.com/icons/png/512/34/34627.png"
-            width="20"
-            height="20"
+            src="https://icon-library.net/images/cart-icon-png-white/cart-icon-png-white-16.jpg"
+            width="40"
+            height="40"
             className="d-inline-block align-top"
             alt="React Bootstrap logo"
           /></a>

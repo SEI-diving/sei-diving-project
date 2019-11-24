@@ -6,7 +6,7 @@ const CoursesData = require("../models/courses").Courses;
 router.get("/", (req, res) => {
 
   CoursesData.find().then(data => {
-res.json(data)
+
     res.render("index", { Corses: data });
   });
 });
