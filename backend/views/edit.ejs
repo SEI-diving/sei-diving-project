@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Edit Trips</h2>
+    <form action="/trips/edit/<%=trip._id%>?_method=PUT" method="POST">
+        title: <input type="text" name="TripTitle"  value="<%=trip.TripTitle%>" /><br/>
+        Description: <input type="text" name="Description" value="<%=trip.Description%>" /><br/>
+        Price: <input type="text" name="Price" value="<%=trip.Price%>" /><br/>
+        StartDate: <input type="text" name="StartDate"  value="<%=trip.StartDate%>" /><br/>
+        EndDate: <input type="text" name="EndDate" value="<%=trip.EndDate%>" /><br/>
+        <br/>
+        <input type="submit">
+</body>
+</html>
