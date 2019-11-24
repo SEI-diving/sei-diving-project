@@ -2,7 +2,7 @@ div.backGraound{
  
     width: 100%;
     background-image: url("https://www.padi.com/sites/default/files/styles/hero_standard/public/2018-01/open-water-diver_0.jpg?h=504096d3&itok=qOR_13fL");
-    height: 823px;
+    height: 750px;
 
     opacity:0.6; 
   background-position: center;
@@ -25,7 +25,7 @@ div.backGraound{
 }
 .calnder{
     position: absolute;
-    top: 90%;
+    top: 70%;
     left: 45%;
 background-color: white;
     text-align: center;

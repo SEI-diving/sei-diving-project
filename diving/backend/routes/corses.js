@@ -29,11 +29,10 @@ router.post("/", (req, res) => {
     });
 });
 
-//get single studtent
+//get single course
 router.get("/:id", (req, res) => {
     CoursesData.findById(req.params.id)
 .then(data=>{
-
     res.render('show',{course:data})
 })
 
@@ -62,10 +61,9 @@ router.delete("/:id", (req, res) => {
 
 //update 
 router.get('/edit/:id',(req,res)=>{
-
     CoursesData.findById(req.params.id)
     .then(data => {
-       
+       res.json(data)
         res.render('edit', {course : data})
     }).catch(err => console.log(err))
     
