@@ -1,0 +1,33 @@
+div.backGraound{
+ 
+    width: 100%;
+    background-image: url("https://www.padi.com/sites/default/files/styles/hero_standard/public/2018-01/open-water-diver_0.jpg?h=504096d3&itok=qOR_13fL");
+    height: 750px;
+
+    opacity:0.6; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.FindTrip{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+    font-weight: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 120px;
+}
+.calnder{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+background-color: white;
+    text-align: center;
+
+}

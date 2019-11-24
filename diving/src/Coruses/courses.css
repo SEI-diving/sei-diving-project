@@ -1,0 +1,17 @@
+.courses
+{
+    padding-top: 50px;
+}
+/* .CourseImg{
+   display: inline-block;
+}
+.CourseBody{
+    display: inline;
+} */
+.span{
+    display: inline-block;
+    padding: 5px;
+}
+.cards{
+    display: inline-block;
+}
