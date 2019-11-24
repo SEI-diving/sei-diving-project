@@ -7,11 +7,12 @@
     <title>Show</title>
 </head>
 <body>
-    <h1> Trip Title : <%= trip.TripTitle%></h1> <br />
-    <p> Description : <%= trip.Description%></p>
+    <h1> Trip Title : <%= trip.TripTitle%></h1> <br/>
+    <p> Date: <%= trip.Date%></p><br />
     <p> Price : <%= trip.Price %></p><br />
-    <p> Start Date: <%= trip.StartDate%></p><br />
-    <p> End Date : <%= trip.EndDate%></p><br />
+    <p> Time : <%= trip.Time%></p><br />
+    <p> Description : <%= trip.Description%></p>
+    <img src= <%= trip.ImageUrl %> /> 
     <a href="/trips"> back</a>
 </body>
 </html>
