@@ -15,7 +15,8 @@ const CourseSchema =  new Schema({
   },
   StartDate: String,
   EndDate:String,
-  ImageUrl:String
+  ImageUrl:String,
+  overview:String
 });
 
 const Courses = mongoose.model('Courses', CourseSchema)
